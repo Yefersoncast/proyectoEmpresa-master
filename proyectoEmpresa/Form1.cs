@@ -28,7 +28,7 @@ namespace proyectoEmpresa
             MySqlConnection conectanos = new MySqlConnection();
             codigo.Connection = conectaruser;
 
-            codigo.CommandText = ("Select *from logindatos where nombre ='" + tbNickUser.Text + "'and contraseña = '" + tbPassUser.Text + "'");
+            codigo.CommandText = ("Select *from clientes where nombre ='" + tbNickUser.Text + "'and contraseña = '" + tbPassUser.Text + "'");
 
             MySqlDataReader leer = codigo.ExecuteReader();
             if (leer.Read())
@@ -62,7 +62,7 @@ namespace proyectoEmpresa
              MySqlConnection conectanos = new MySqlConnection();
              codigo.Connection = conectaradmin;
             
-             codigo.CommandText = ("Select *from logindatos where nombre ='" + tbNickAdmin.Text + "'and contraseña = '" + tbPassAdmin.Text + "' and tipo = '" +admin+ "'");
+             codigo.CommandText = ("Select *from clientes where nombre ='" + tbNickAdmin.Text + "'and contraseña = '" + tbPassAdmin.Text + "' and tipo = '" +admin+ "'");
             
              MySqlDataReader leer = codigo.ExecuteReader();
              if (leer.Read())
@@ -105,7 +105,7 @@ namespace proyectoEmpresa
                 tbPassAdmin.Text = "";
                 tbPassAdmin.ForeColor = Color.Black;
                 tbPassAdmin.UseSystemPasswordChar = true;
-                tbPassAdmin.UseSystemPasswordChar = true;
+                
             }
         }
 

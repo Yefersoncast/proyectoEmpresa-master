@@ -17,11 +17,11 @@ namespace proyectoEmpresa.Controller
             usersModel = new UsersModel();
 
         }
-        public string guadarDatos(string nombre, string apellido, string direccion, string telefono, string documento, string tipodedcumento, string correo, string contraseña)
+        public string guadarDatos(string name, string surname, string adress, string phone, string documen, string tipedoc, string email, string password)
         {
             string resultado;
 
-            string query = "INSERT INTO logindatos (Nombre,apellido,direccion,telefono,documento,tipo_de_documento,correo,contraseña) VALUES ('" + nombre + "','" + apellido + "','" + direccion + "','" + telefono + "','" + documento + "','" + tipodedcumento + "','" + correo + "','" + contraseña + "')";
+            string query = "INSERT INTO clientes (Nombre,apellido,direccion,telefono,documento,tipo_de_documento,correo,contraseña) VALUES ('" + name + "','" + surname + "','" + adress + "','" + phone + "','" + documen + "','" + tipedoc + "','" + email + "','" + password + "')";
 
             string respuesta = usersModel.guardarDato(query);
 
